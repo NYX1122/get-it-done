@@ -4,7 +4,7 @@ var repoContainerEl = document.querySelector("#repos-container");
 var repoSearchTerm = document.querySelector("#repo-search-term");
 
 var getUserRepos = function(user) {
-    var apiUrl = "https://api.gitthub.com/users/" + user + "/repos";
+    var apiUrl = "https://api.github.com/users/" + user + "/repos";
     fetch(apiUrl).then(function(response) {
         if (response.ok) {
             response.json().then(function(data) {
